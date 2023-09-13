@@ -1,0 +1,33 @@
+
+@font-face {
+	font-family: 'Baloo';
+	src: url('/baloo.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Cinzel';
+	src: url('/cinzel.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FiraCode';
+	src: url('/firacode.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('/inter.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body {
+	background-color: transparent;
+}
