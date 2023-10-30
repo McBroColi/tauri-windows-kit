@@ -4,18 +4,16 @@
 	import '$styles/app.css'
 	import '$styles/sassapp.scss'
     import 'iconify-icon'
-	import Appbar from '$components/app/Appbar.svelte'
-	import Sidebar from '$components/app/sidebar/Sidebar.svelte';
+
+	import AppFrame from '$components/app/frame/AppFrame/AppFrame.svelte';
 
 
 </script>
 
 
-<div class="w-screen h-screen relative flex flex-col bg-zinc-900 text-zinc-300 overflow-hidden">
-	<Appbar />
-	<div class="flex w-full h-full">
-		<Sidebar />
+<div class="w-screen h-screen relative flex bg-base-100 text-base-content overflow-hidden">
+	<AppFrame>
 		<slot />
-	</div>
+	</AppFrame>
 </div>
 

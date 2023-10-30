@@ -8,25 +8,25 @@ type Config = TweenedOptions<number>
 
 export function makeRangeStore(range: Range, config?: Config) {
 	let isMin = true
-	const { subscribe, set, update } = tweened<number>(range.min)
+	const { subscribe, set } = tweened<number>(range.min, config)
 
 	return {
 		subscribe,
 		min: (config?: Config) => {
 			isMin = true
-			return set(range.min)
+			return set(range.min, config)
 		},
 		max: (config?: Config) => {
 			isMin = false
-			return set(range.max)
+			return set(range.max, config)
 		},
 		toggle: (config?: Config) => {
 			if (isMin) {
 				isMin = false
-				return set(range.min)
+				return set(range.min, config)
 			} else {
 				isMin = true
-				return set(range.max)
+				return set(range.max, config)
 			}
 		}
 	}

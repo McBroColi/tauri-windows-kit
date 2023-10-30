@@ -1,7 +1,7 @@
 
 import { interpolateHsl } from "d3-interpolate";
 import { tweened } from "svelte/motion";
-import type { TweenedOptions } from "svelte/motion";
+import type { Readable, TweenedOptions } from "svelte/motion";
 
 
 
@@ -41,15 +41,13 @@ function validateConfig(config?: Config) {
 
 
 
-export type ColorStopsStoreTwoColors = {
-    subscribe: any,
+export interface ColorStopsStoreTwoColors extends Readable<string> {
     toggle: (config?: Config) => Promise<void>,
     on: (config?: Config) => Promise<void>,
     off: (config?: Config) => Promise<void>
 }
 
-export type ColorStopsStoreMultiColors = {
-    subscribe: any,
+export interface ColorStopsStoreMultiColors extends Readable<string> {
     next: (config?: Config) => Promise<void>,
     prev: (config?: Config) => Promise<void>,
     set: (index: number, config?: Config) => Promise<void>

@@ -16,6 +16,3 @@ function makeWindowTitleStore() {
 }
 
 export const windowTitle = makeWindowTitleStore()
-
-
-

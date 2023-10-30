@@ -1,10 +1,11 @@
 
 <script lang='ts'>
-	import { tweened } from "svelte/motion";
-	import { appSidebarToggleStore } from "$stores/sidebar";
+	import { tweened } from "svelte/motion"
+	import { appSidebarToggleStore } from "$components/app/frame/shared/sidebarState"
 
+
+	
 	$: isOpen = $appSidebarToggleStore
-
 
 	const store = tweened<number>(0)
 	
@@ -33,8 +34,8 @@ class="w-12 h-8 flex items-center justify-center">
 	<div class="w-4 h-4 border rounded-sm box-content">
 		<div
 		style="transform: translateX({$store}px);"
-		class="w-1 h-4 bg-white absolute"
-		
-		></div>
+		class="w-1 h-4 bg-white absolute">
+			<iconify-icon icon="material:" />
+		</div>
 	</div>
 </button>
